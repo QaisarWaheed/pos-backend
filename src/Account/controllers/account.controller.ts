@@ -11,7 +11,9 @@ import { AccountService } from '../services/account.service';
 import { User } from '../entities/user.entity';
 import { CreateUser } from '../dtos/CreateUser.dto';
 import { UpdateUserDto } from '../dtos/UpdateUser.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Accounts')
 @Controller('account')
 export class AccountController {
   constructor(private readonly userService: AccountService) {}
